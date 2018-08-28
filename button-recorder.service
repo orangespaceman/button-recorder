@@ -1,0 +1,10 @@
+Description=ButtonRecorder
+
+[Service]
+ExecStart=/bin/bash -c 'DISPLAY=":0" /home/pi/AIY-voice-kit-python/env/bin/python3 -u button-recorder/record.py'
+WorkingDirectory=/home/pi/AIY-voice-kit-python
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
